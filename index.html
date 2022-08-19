@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player" id="player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+      </div>
+      <ul class="play-list"></ul>
+    </div>
+    <div class="progress-bar hidden" id="progressBar">
+      <h3 class="track-name">Track name</h3>
+      <div class="progress-settings">
+        <div class="duration-player">
+          <div class="progress">
+          </div>
+        </div>
+        <div class="track-time">0:00 / 0:00</div>
+      </div>
+      <div class="sound-controls">
+        <button class="sound-icon sound-on"></button>
+        <input type="range" class="sound-range">
+      </div>
+    </div>
+    <div class="weather" id="weather">
+      <input type="text" class="city" />
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time" id="time"></time>
+    <date class="date" id="date"></date>
+    <div class="greeting-container" id="greeting">
+      <span class="greeting"></span>
+      <input type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="settings-wrapper">
+      <button class="settings-btn"></button>
+      <div class="settings hidden">
+        <div class="show-settings">
+          <h3><span>HIDE</span></h3>
+          <ul class="show-settings-list">
+            <li>
+              <span>Clock</span>
+              <input type="checkbox" name="show" value="time">
+            </li>
+            <li>
+              <span>Date</span>
+              <input type="checkbox" name="show" value="date">
+            </li>
+            <li>
+              <span>Greeting</span>
+              <input type="checkbox" name="show" value="greeting">
+            </li>
+            <li>
+              <span>Quote</span>
+              <input type="checkbox" name="show" value="quote">
+            </li>
+            <li>
+              <span>Playlist</span>
+              <input type="checkbox" name="show" value="player">
+            </li>
+            <li>
+              <span>Audioplayer</span>
+              <input type="checkbox" name="show" value="progressBar" checked>
+            </li>
+            <li>
+              <span>Weather</span>
+              <input type="checkbox" name="show" value="weather">
+            </li>
+            <li>
+              <span>ToDo</span>
+              <input type="checkbox" name="show" value="todo">
+            </li>
+          </ul>
+        </div>
+        <div class="language-settings">
+          <h3><span>LANGUAGE</span></h3>
+          <ul class="language-settings-list">
+            <li>
+              <input type="radio" name="language" value="en" id="en">
+              <span>English</span>
+            </li>
+            <li>
+              <input type="radio" name="language" value="uk" id="uk">
+              <span>Ukrainian</span>
+            </li>
+          </ul>
+        </div>
+        <div class="background-settings">
+          <h3><span>BACKGROUND IMAGE</span></h3>
+          <ul class="background-settings-list">
+            <li>
+              <input type="radio" name="background-image" value="github" id="github">
+              <span>GitHub</span>
+            </li>
+            <li>
+              <input type="radio" name="background-image" value="unsplash" id="unsplash">
+              <span>Unsplash API</span>
+              <input type="text" placeholder="tag" id="unsplashTagInput">
+            </li>
+            <li>
+              <input type="radio" name="background-image" value="flickr" id="flickr">
+              <span>Flickr API</span>
+              <input type="text" placeholder="tag" id="flickrTagInput">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="quote-wrapper" id="quote">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <div class="todo-wrapper" id="todo">
+      <button class="todo-btn">ToDo</button>
+      <div class="todo hidden">
+        <input type="text" class="new-todo" placeholder="New Todo" id="inputNewToDo">
+        <ul class="todo-list"></ul>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
